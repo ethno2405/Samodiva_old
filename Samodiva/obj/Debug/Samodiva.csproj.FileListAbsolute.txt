@@ -5,3 +5,10 @@ D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\bin\EntityFramework
 D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.csprojResolveAssemblyReference.cache
 D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.dll
 D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.pdb
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\bin\Samodiva.dll
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\bin\Samodiva.pdb
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\bin\EntityFramework.dll
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\bin\EntityFramework.xml
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\obj\Debug\Samodiva.csprojResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\obj\Debug\Samodiva.dll
+D:\My Documents\Visual Studio 2010\SamodivaGitHub\Samodiva\obj\Debug\Samodiva.pdb
