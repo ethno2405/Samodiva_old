@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Samodiva.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Panel</title>
+    <link href="../CSS/Master.css" rel="Stylesheet" type="text/css" />
+    <link href="../CSS/Reset.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="phAdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="FormAdmin" runat="server">
+        <div class="AdminWrap">
+            <div class="LoginPanel">
+                <asp:LoginStatus ID="LoginStatus" runat="server" />
+                <asp:LoginName ID="LoginName" runat="server" />
+            </div>
+            <ul id="AdminNavigation" runat="server" class="AdminNavigation" visible="false">
+                <li>
+                    <asp:HyperLink ID="btnAdminHome" runat="server" NavigateUrl="~/Admin/Default.aspx" Text="Home"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditNews" runat="server" NavigateUrl="~/Admin/Content/EditNews.aspx" Text="Edit News"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditAwards" runat="server" NavigateUrl="~/Admin/Content/EditAwards.aspx" Text="Edit Awards"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnVideos" runat="server" NavigateUrl="~/Admin/Content/Videos.aspx" Text="Videos"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditCategories" runat="server" NavigateUrl="~/Admin/Content/EditCatogories.aspx" Text="Edit Categories"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnPictures" runat="server" NavigateUrl="~/Admin/Content/Pictures.aspx" Text="Pictures"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnMenageTheBest" runat="server" NavigateUrl="~/Admin/Content/TheBest.aspx" Text="The Best"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditSchedule" runat="server" NavigateUrl="~/Admin/Content/EditSchedule.aspx" Text="Edit Schedule"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditCostumes" runat="server" NavigateUrl="~/Admin/Content/EditCostumes.aspx" Text="Edit Costumes"></asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="btnEditAboutUs" runat="server" NavigateUrl="~/Admin/Content/EditAboutUs.aspx" Text="Edit About Us"></asp:HyperLink>
+                </li>
+            </ul>
+            <div class="AdminContent">
+                <asp:ContentPlaceHolder ID="phAdminContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

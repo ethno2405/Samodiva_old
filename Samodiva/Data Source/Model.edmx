@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SamodivaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SamodivaDBModelStoreContainer">
+          <EntitySet Name="About_Us" EntityType="SamodivaDBModel.Store.About_Us" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Awards" EntityType="SamodivaDBModel.Store.Awards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Categories" EntityType="SamodivaDBModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Store.Costumes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="News" EntityType="SamodivaDBModel.Store.News" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Options" EntityType="SamodivaDBModel.Store.Options" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Participants" EntityType="SamodivaDBModel.Store.Participants" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Store.Pictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Schedule" EntityType="SamodivaDBModel.Store.Schedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="SamodivaDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="SamodivaDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Videos" EntityType="SamodivaDBModel.Store.Videos" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="About_Us">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Text" Type="ntext" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Awards">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="Image_Url" Type="ntext" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Costumes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="Image_Url" Type="text" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Body" Type="ntext" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Options">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Participants">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Text" Type="ntext" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Image_URL" Type="text" />
+        </EntityType>
+        <EntityType Name="Pictures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="CategoryId" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Text" Type="ntext" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Last_Login_Date" Type="datetime" />
+          <Property Name="Last_Login_IP" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Videos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="URL" Type="text" Nullable="false" />
+          <Property Name="Description" Type="ntext" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="ThumbURL" Type="nvarchar" Nullable="false" MaxLength="128" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SamodivaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SamodivaDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="About_Us" EntityType="SamodivaDBModel.About_Us" />
+          <EntitySet Name="Awards" EntityType="SamodivaDBModel.Award" />
+          <EntitySet Name="Categories" EntityType="SamodivaDBModel.Category" />
+          <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Costume" />
+          <EntitySet Name="News" EntityType="SamodivaDBModel.News" />
+          <EntitySet Name="Options" EntityType="SamodivaDBModel.Option" />
+          <EntitySet Name="Participants" EntityType="SamodivaDBModel.Participant" />
+          <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Picture" />
+          <EntitySet Name="Schedules" EntityType="SamodivaDBModel.Schedule" />
+          <EntitySet Name="sysdiagrams" EntityType="SamodivaDBModel.sysdiagram" />
+          <EntitySet Name="Users" EntityType="SamodivaDBModel.User" />
+          <EntitySet Name="Videos" EntityType="SamodivaDBModel.Video" />
+          <AssociationSet Name="FK__Pictures__Catego__607251E5" Association="SamodivaDBModel.FK__Pictures__Catego__607251E5">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Pictures" EntitySet="Pictures" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="About_Us">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Award">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Image_Url" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Pictures" Relationship="SamodivaDBModel.FK__Pictures__Catego__607251E5" FromRole="Categories" ToRole="Pictures" />
+        </EntityType>
+        <EntityType Name="Costume">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Image_Url" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Option">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Key" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Participant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Image_URL" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryId" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="SamodivaDBModel.FK__Pictures__Catego__607251E5" FromRole="Pictures" ToRole="Categories" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Last_Login_Date" Type="DateTime" Precision="3" />
+          <Property Name="Last_Login_IP" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Video">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ThumbURL" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__Pictures__Catego__607251E5">
+          <End Role="Categories" Type="SamodivaDBModel.Category" Multiplicity="0..1" />
+          <End Role="Pictures" Type="SamodivaDBModel.Picture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pictures">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SamodivaDBModelStoreContainer" CdmEntityContainer="SamodivaDBEntities">
+          <EntitySetMapping Name="About_Us">
+            <EntityTypeMapping TypeName="SamodivaDBModel.About_Us">
+              <MappingFragment StoreEntitySet="About_Us">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Awards">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Award">
+              <MappingFragment StoreEntitySet="Awards">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image_Url" ColumnName="Image_Url" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Costumes">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Costume">
+              <MappingFragment StoreEntitySet="Costumes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image_Url" ColumnName="Image_Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="SamodivaDBModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Options">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Option">
+              <MappingFragment StoreEntitySet="Options">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participants">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Participant">
+              <MappingFragment StoreEntitySet="Participants">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Image_URL" ColumnName="Image_URL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Picture">
+              <MappingFragment StoreEntitySet="Pictures">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SamodivaDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SamodivaDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Last_Login_Date" ColumnName="Last_Login_Date" />
+                <ScalarProperty Name="Last_Login_IP" ColumnName="Last_Login_IP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videos">
+            <EntityTypeMapping TypeName="SamodivaDBModel.Video">
+              <MappingFragment StoreEntitySet="Videos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ThumbURL" ColumnName="ThumbURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="SamodivaDBModel.About_Us" Width="1.5" PointX="0.75" PointY="4.75" Height="1.4033821614583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Award" Width="1.5" PointX="2.75" PointY="4.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Category" Width="1.5" PointX="0.75" PointY="1.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Costume" Width="1.5" PointX="4.75" PointY="4.75" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.News" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Option" Width="1.5" PointX="6.75" PointY="3.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Participant" Width="1.5" PointX="6.75" PointY="6.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Picture" Width="1.5" PointX="3" PointY="1" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Schedule" Width="1.5" PointX="7.75" PointY="0.75" Height="1.4033821614583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.User" Width="1.5" PointX="2.75" PointY="7.75" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="SamodivaDBModel.Video" Width="1.5" PointX="8.75" PointY="3.75" Height="2.1725878906250031" IsExpanded="true" />
+        <AssociationConnector Association="SamodivaDBModel.FK__Pictures__Catego__607251E5" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.172841796875" />
+          <ConnectorPoint PointX="3" PointY="2.172841796875" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

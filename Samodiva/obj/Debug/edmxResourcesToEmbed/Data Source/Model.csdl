@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SamodivaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SamodivaDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About_Us" EntityType="SamodivaDBModel.About_Us" />
+    <EntitySet Name="Awards" EntityType="SamodivaDBModel.Award" />
+    <EntitySet Name="Categories" EntityType="SamodivaDBModel.Category" />
+    <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Costume" />
+    <EntitySet Name="News" EntityType="SamodivaDBModel.News" />
+    <EntitySet Name="Options" EntityType="SamodivaDBModel.Option" />
+    <EntitySet Name="Participants" EntityType="SamodivaDBModel.Participant" />
+    <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Picture" />
+    <EntitySet Name="Schedules" EntityType="SamodivaDBModel.Schedule" />
+    <EntitySet Name="sysdiagrams" EntityType="SamodivaDBModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="SamodivaDBModel.User" />
+    <EntitySet Name="Videos" EntityType="SamodivaDBModel.Video" />
+    <AssociationSet Name="FK__Pictures__Catego__607251E5" Association="SamodivaDBModel.FK__Pictures__Catego__607251E5">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Pictures" EntitySet="Pictures" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="About_Us">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image_Url" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Pictures" Relationship="SamodivaDBModel.FK__Pictures__Catego__607251E5" FromRole="Categories" ToRole="Pictures" />
+  </EntityType>
+  <EntityType Name="Costume">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image_Url" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Option">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Participant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Image_URL" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="CategoryId" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="SamodivaDBModel.FK__Pictures__Catego__607251E5" FromRole="Pictures" ToRole="Categories" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Last_Login_Date" Type="DateTime" Precision="3" />
+    <Property Name="Last_Login_IP" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ThumbURL" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Pictures__Catego__607251E5">
+    <End Role="Categories" Type="SamodivaDBModel.Category" Multiplicity="0..1" />
+    <End Role="Pictures" Type="SamodivaDBModel.Picture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pictures">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

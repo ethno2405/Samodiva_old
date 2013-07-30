@@ -1,0 +1,43 @@
+﻿<settings>
+  <General_Properties>
+    <maximize value="false"/>
+    <componentWidth value="1589"/>
+    <componentHeight value="911"/>
+    <stretchWidth value="true"/>
+    <stretchHeight value="true"/>
+    <columns value="15"/>
+    <radius value="150"/>
+    <easing value="4"/>
+    <enlargeEase value="7"/>
+    <pictureDistance value="0"/>
+    <minThumbWidth value="70"/>
+    <minThumbHeight value="60"/>
+    <maxThumbWidth value="90"/>
+    <maxThumbHeight value="80"/>
+    <backgroundColor value="0x000000"/>
+    <backgroundAlpha value="0"/>
+    <maximizeBgColor value="0xffffff"/>
+    <maximizeBgAlpha value="0.5"/>
+    <arrowURL value=""/>
+    <style value="assets/css/style.css"/>
+    <assets value="thumbs.xml"/>
+    <showAbout value="false"/>
+  </General_Properties>
+  <Image_Properties>
+    <borderColor value="0xffffff"/>
+    <borderAlpha value="0.5"/>
+    <borderWidth value="0"/>
+  </Image_Properties>
+  <Tooltip_Properties>
+    <backgroundColor value="0x000000"/>
+    <backgroundAlpha value="0.4"/>
+    <cornerRadius value="5"/>
+    <embedFont value="false"/>
+  </Tooltip_Properties>
+  <DescriptionText_Properties>
+    <backgroundColor value="0x000000"/>
+    <backgroundAlpha value="0.5"/>
+    <cornerRadius value="5"/>
+    <embedFont value="false"/>
+  </DescriptionText_Properties>
+</settings>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SamodivaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SamodivaDBModelStoreContainer">
+    <EntitySet Name="About_Us" EntityType="SamodivaDBModel.Store.About_Us" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Awards" EntityType="SamodivaDBModel.Store.Awards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="SamodivaDBModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Store.Costumes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="News" EntityType="SamodivaDBModel.Store.News" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Options" EntityType="SamodivaDBModel.Store.Options" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Participants" EntityType="SamodivaDBModel.Store.Participants" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Store.Pictures" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Schedule" EntityType="SamodivaDBModel.Store.Schedule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="SamodivaDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="SamodivaDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Videos" EntityType="SamodivaDBModel.Store.Videos" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="About_Us">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Text" Type="ntext" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Awards">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Image_Url" Type="ntext" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Costumes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Image_Url" Type="text" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Body" Type="ntext" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Options">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Participants">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Text" Type="ntext" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Image_URL" Type="text" />
+  </EntityType>
+  <EntityType Name="Pictures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="CategoryId" Type="int" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Text" Type="ntext" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Last_Login_Date" Type="datetime" />
+    <Property Name="Last_Login_IP" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Videos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="URL" Type="text" Nullable="false" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="ThumbURL" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+</Schema>

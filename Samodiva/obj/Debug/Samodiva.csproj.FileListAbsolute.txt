@@ -1,0 +1,7 @@
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\bin\Samodiva.dll
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\bin\Samodiva.pdb
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\bin\EntityFramework.dll
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\bin\EntityFramework.xml
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.csprojResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.dll
+D:\My Documents\Visual Studio 2010\Samodiva - Blago\Samodiva\obj\Debug\Samodiva.pdb

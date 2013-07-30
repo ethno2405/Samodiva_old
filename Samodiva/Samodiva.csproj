@@ -1,0 +1,1085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7CDF0EE-6D7A-4BCC-9291-25F60B92A247}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samodiva</RootNamespace>
+    <AssemblyName>Samodiva</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="Admin\Content\EditAboutUs.aspx" />
+    <Content Include="Admin\Content\EditAwards.aspx" />
+    <Content Include="Admin\Content\EditCatogories.aspx" />
+    <Content Include="Admin\Content\EditCostumes.aspx" />
+    <Content Include="Admin\Content\EditNews.aspx" />
+    <Content Include="Admin\Content\EditPicture.aspx" />
+    <Content Include="Admin\Content\EditSchedule.aspx" />
+    <Content Include="Admin\Content\EditTheBest.aspx" />
+    <Content Include="Admin\Content\EditVideo.aspx" />
+    <Content Include="Admin\Content\Pictures.aspx" />
+    <Content Include="Admin\Content\PreviewCostume.aspx" />
+    <Content Include="Admin\Content\PreviewNews.aspx" />
+    <Content Include="Admin\Content\TheBest.aspx" />
+    <Content Include="Admin\Content\Videos.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Awards.aspx" />
+    <Content Include="Costumes.aspx" />
+    <Content Include="CSS\intro.css" />
+    <Content Include="CSS\jquery.mCustomScrollbar.css" />
+    <Content Include="CSS\Master.css" />
+    <Content Include="CSS\mCSB_buttons.png" />
+    <Content Include="CSS\Reset.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CustomControls\TinyMce.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Gallery.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="grid-gallery\assets\arrow1.png" />
+    <Content Include="grid-gallery\assets\arrow2.gif" />
+    <Content Include="grid-gallery\assets\arrow3.jpg" />
+    <Content Include="grid-gallery\assets\arrow4.png" />
+    <Content Include="grid-gallery\assets\close.gif" />
+    <Content Include="grid-gallery\assets\css\style.css" />
+    <Content Include="grid-gallery\assets\css\style2.css" />
+    <Content Include="grid-gallery\assets\css\style3.css" />
+    <Content Include="grid-gallery\assets\floral1.jpg" />
+    <Content Include="grid-gallery\assets\floral2.jpg" />
+    <Content Include="grid-gallery\assets\floral3.png" />
+    <Content Include="grid-gallery\assets\goToUrlBlack.png" />
+    <Content Include="grid-gallery\assets\preloaders\redsquares.swf" />
+    <Content Include="grid-gallery\assets\preloaders\redstripes.swf" />
+    <Content Include="grid-gallery\assets\preloaders\sequence.swf" />
+    <Content Include="grid-gallery\assets\preloaders\video.swf" />
+    <Content Include="grid-gallery\assets\redarrow.png" />
+    <Content Include="grid-gallery\assets\skins\skin1.xml" />
+    <Content Include="grid-gallery\assets\skins\skin1\closeIcon.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\left.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\leftOver.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\pause.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\play.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\right.png" />
+    <Content Include="grid-gallery\assets\skins\skin1\rightOver.png" />
+    <Content Include="grid-gallery\assets\skins\skin2.xml" />
+    <Content Include="grid-gallery\assets\skins\skin2\left.png" />
+    <Content Include="grid-gallery\assets\skins\skin2\leftOver.png" />
+    <Content Include="grid-gallery\assets\skins\skin2\right.png" />
+    <Content Include="grid-gallery\assets\skins\skin2\rightOver.png" />
+    <Content Include="grid-gallery\assets\skins\skin3.xml" />
+    <Content Include="grid-gallery\assets\skins\skin3\close.png" />
+    <Content Include="grid-gallery\assets\skins\skin3\closeIcon.png" />
+    <Content Include="grid-gallery\assets\skins\skin3\left.png" />
+    <Content Include="grid-gallery\assets\skins\skin3\right.png" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1.xml" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\back.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\bar.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\barScrubber.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\centerPlay.png" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\pause.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\pauseDown.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\pauseOver.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\play.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\playDown.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\playOver.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin1\pointer.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2.xml" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\back.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\bar.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\barScrubber.gif" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\centerPlay.png" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\pause.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\pauseDown.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\pauseOver.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\play.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\playDown.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\playOver.jpg" />
+    <Content Include="grid-gallery\assets\skins\videoSkin2\pointer.gif" />
+    <Content Include="grid-gallery\assets\transitions\3D.xml" />
+    <Content Include="grid-gallery\assets\transitions\3Dfaces.xml" />
+    <Content Include="grid-gallery\assets\transitions\fades.xml" />
+    <Content Include="grid-gallery\assets\transitions\favorites-text.xml" />
+    <Content Include="grid-gallery\assets\transitions\masks.xml" />
+    <Content Include="grid-gallery\assets\transitions\masks\Bouncing Ball.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Centered Expanding Rectangles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Centered Vertical Blinds.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Circles Wave.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Clench.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Concentric Circles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Concentric Squares.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Curtain Fall.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Expanding Clench.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Hatching.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Horizontal Expanding Rectangles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Large Vertical Blinds.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Progressive Expanding Circles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Progressive Expanding Lines.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Progressive Expanding Squares.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Quick Assembly.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Random Expanding Circles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Random Expanding Squares.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Rotating Expanding Stars.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Simultaneously Expanding Circles.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Simultaneously Expanding Squares.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Simultaneously Expanding Stars.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Squares Wave.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Thin Vertical Blinds.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Water Drops.swf" />
+    <Content Include="grid-gallery\assets\transitions\masks\Wiping Vertical Blinds.swf" />
+    <Content Include="grid-gallery\assets\transitions\rotations.xml" />
+    <Content Include="grid-gallery\assets\transitions\slides.xml" />
+    <Content Include="grid-gallery\assets\transitions\stretch.xml" />
+    <Content Include="grid-gallery\big.xml" />
+    <Content Include="grid-gallery\CustomizableGridGalleryFX.swf" />
+    <Content Include="grid-gallery\holder\holder.swf" />
+    <Content Include="grid-gallery\holder\settings.xml" />
+    <Content Include="grid-gallery\ImageGridFX\navigation.swf" />
+    <Content Include="grid-gallery\ImageGridFX\settings.xml" />
+    <Content Include="grid-gallery\images\big\101.jpg" />
+    <Content Include="grid-gallery\images\big\102.jpg" />
+    <Content Include="grid-gallery\images\big\103.jpg" />
+    <Content Include="grid-gallery\images\big\104.jpg" />
+    <Content Include="grid-gallery\images\big\105.jpg" />
+    <Content Include="grid-gallery\images\big\106.jpg" />
+    <Content Include="grid-gallery\images\big\107.jpg" />
+    <Content Include="grid-gallery\images\big\108.jpg" />
+    <Content Include="grid-gallery\images\big\109.jpg" />
+    <Content Include="grid-gallery\images\big\110.jpg" />
+    <Content Include="grid-gallery\images\big\111.jpg" />
+    <Content Include="grid-gallery\images\big\112.jpg" />
+    <Content Include="grid-gallery\images\big\113.jpg" />
+    <Content Include="grid-gallery\images\big\114.jpg" />
+    <Content Include="grid-gallery\images\big\115.jpg" />
+    <Content Include="grid-gallery\images\big\116.jpg" />
+    <Content Include="grid-gallery\images\big\117.jpg" />
+    <Content Include="grid-gallery\images\big\118.jpg" />
+    <Content Include="grid-gallery\images\big\119.jpg" />
+    <Content Include="grid-gallery\images\big\120.jpg" />
+    <Content Include="grid-gallery\images\big\121.jpg" />
+    <Content Include="grid-gallery\images\big\122.jpg" />
+    <Content Include="grid-gallery\images\big\123.jpg" />
+    <Content Include="grid-gallery\images\big\124.jpg" />
+    <Content Include="grid-gallery\images\big\125.jpg" />
+    <Content Include="grid-gallery\images\big\126.jpg" />
+    <Content Include="grid-gallery\images\big\127.jpg" />
+    <Content Include="grid-gallery\images\big\128.jpg" />
+    <Content Include="grid-gallery\images\big\129.jpg" />
+    <Content Include="grid-gallery\images\big\130.jpg" />
+    <Content Include="grid-gallery\images\big\131.jpg" />
+    <Content Include="grid-gallery\images\big\132.jpg" />
+    <Content Include="grid-gallery\images\big\133.jpg" />
+    <Content Include="grid-gallery\images\big\134.jpg" />
+    <Content Include="grid-gallery\images\big\135.jpg" />
+    <Content Include="grid-gallery\images\big\136.jpg" />
+    <Content Include="grid-gallery\images\big\137.jpg" />
+    <Content Include="grid-gallery\images\big\138.jpg" />
+    <Content Include="grid-gallery\images\big\139.jpg" />
+    <Content Include="grid-gallery\images\big\140.jpg" />
+    <Content Include="grid-gallery\images\big\141.jpg" />
+    <Content Include="grid-gallery\images\big\142.jpg" />
+    <Content Include="grid-gallery\images\big\143.jpg" />
+    <Content Include="grid-gallery\images\big\144.jpg" />
+    <Content Include="grid-gallery\images\big\145.jpg" />
+    <Content Include="grid-gallery\images\big\146.jpg" />
+    <Content Include="grid-gallery\images\big\147.jpg" />
+    <Content Include="grid-gallery\images\big\148.jpg" />
+    <Content Include="grid-gallery\images\big\149.jpg" />
+    <Content Include="grid-gallery\images\big\150.jpg" />
+    <Content Include="grid-gallery\images\big\candle.swf" />
+    <Content Include="grid-gallery\images\big\globe.swf" />
+    <Content Include="grid-gallery\images\thumbs\101.jpg" />
+    <Content Include="grid-gallery\images\thumbs\102.jpg" />
+    <Content Include="grid-gallery\images\thumbs\103.jpg" />
+    <Content Include="grid-gallery\images\thumbs\104.jpg" />
+    <Content Include="grid-gallery\images\thumbs\105.jpg" />
+    <Content Include="grid-gallery\images\thumbs\106.jpg" />
+    <Content Include="grid-gallery\images\thumbs\107.jpg" />
+    <Content Include="grid-gallery\images\thumbs\108.jpg" />
+    <Content Include="grid-gallery\images\thumbs\109.jpg" />
+    <Content Include="grid-gallery\images\thumbs\110.jpg" />
+    <Content Include="grid-gallery\images\thumbs\111.jpg" />
+    <Content Include="grid-gallery\images\thumbs\112.jpg" />
+    <Content Include="grid-gallery\images\thumbs\113.jpg" />
+    <Content Include="grid-gallery\images\thumbs\114.jpg" />
+    <Content Include="grid-gallery\images\thumbs\115.jpg" />
+    <Content Include="grid-gallery\images\thumbs\116.jpg" />
+    <Content Include="grid-gallery\images\thumbs\117.jpg" />
+    <Content Include="grid-gallery\images\thumbs\118.jpg" />
+    <Content Include="grid-gallery\images\thumbs\119.jpg" />
+    <Content Include="grid-gallery\images\thumbs\120.jpg" />
+    <Content Include="grid-gallery\images\thumbs\121.jpg" />
+    <Content Include="grid-gallery\images\thumbs\122.jpg" />
+    <Content Include="grid-gallery\images\thumbs\123.jpg" />
+    <Content Include="grid-gallery\images\thumbs\124.jpg" />
+    <Content Include="grid-gallery\images\thumbs\125.jpg" />
+    <Content Include="grid-gallery\images\thumbs\126.jpg" />
+    <Content Include="grid-gallery\images\thumbs\127.jpg" />
+    <Content Include="grid-gallery\images\thumbs\128.jpg" />
+    <Content Include="grid-gallery\images\thumbs\129.jpg" />
+    <Content Include="grid-gallery\images\thumbs\130.jpg" />
+    <Content Include="grid-gallery\images\thumbs\131.jpg" />
+    <Content Include="grid-gallery\images\thumbs\132.jpg" />
+    <Content Include="grid-gallery\images\thumbs\133.jpg" />
+    <Content Include="grid-gallery\images\thumbs\134.jpg" />
+    <Content Include="grid-gallery\images\thumbs\135.jpg" />
+    <Content Include="grid-gallery\images\thumbs\136.jpg" />
+    <Content Include="grid-gallery\images\thumbs\137.jpg" />
+    <Content Include="grid-gallery\images\thumbs\138.jpg" />
+    <Content Include="grid-gallery\images\thumbs\139.jpg" />
+    <Content Include="grid-gallery\images\thumbs\140.jpg" />
+    <Content Include="grid-gallery\images\thumbs\141.jpg" />
+    <Content Include="grid-gallery\images\thumbs\142.jpg" />
+    <Content Include="grid-gallery\images\thumbs\143.jpg" />
+    <Content Include="grid-gallery\images\thumbs\144.jpg" />
+    <Content Include="grid-gallery\images\thumbs\145.jpg" />
+    <Content Include="grid-gallery\images\thumbs\146.jpg" />
+    <Content Include="grid-gallery\images\thumbs\147.jpg" />
+    <Content Include="grid-gallery\images\thumbs\148.jpg" />
+    <Content Include="grid-gallery\images\thumbs\149.jpg" />
+    <Content Include="grid-gallery\images\thumbs\150.jpg" />
+    <Content Include="grid-gallery\images\thumbs\candle.jpg" />
+    <Content Include="grid-gallery\images\thumbs\globe.jpg" />
+    <Content Include="grid-gallery\settings.xml" />
+    <Content Include="grid-gallery\swfobject.js" />
+    <Content Include="grid-gallery\thumbs.xml" />
+    <Content Include="Home.aspx" />
+    <Content Include="Img\ajax-loader.gif" />
+    <Content Include="Img\Background.jpg" />
+    <Content Include="Img\Button-1-Hover.png" />
+    <Content Include="Img\Button-1.png" />
+    <Content Include="Img\Button-2-Hover.png" />
+    <Content Include="Img\Button-2.png" />
+    <Content Include="Img\Button-3-Hover.png" />
+    <Content Include="Img\Button-3.png" />
+    <Content Include="Img\Button-4-Hover.png" />
+    <Content Include="Img\Button-4.png" />
+    <Content Include="Img\Button-5-Hover.png" />
+    <Content Include="Img\Button-5.png" />
+    <Content Include="Img\Button-6-Hover.png" />
+    <Content Include="Img\Button-6.png" />
+    <Content Include="Img\Button-7-Hover.png" />
+    <Content Include="Img\Button-7.png" />
+    <Content Include="Img\Button-8-Hover.png" />
+    <Content Include="Img\Button-8.png" />
+    <Content Include="Img\darkcurtain.jpg" />
+    <Content Include="Img\facebook_button.png" />
+    <Content Include="Img\frontcurtain-orig.jpg" />
+    <Content Include="Img\frontcurtain.jpg" />
+    <Content Include="Img\logo_off.png" />
+    <Content Include="Img\logo_on.png" />
+    <Content Include="Img\proj_green_off.png" />
+    <Content Include="Img\proj_green_on.png" />
+    <Content Include="Img\rope.png" />
+    <Content Include="Img\Site_Logo.png" />
+    <Content Include="Img\slogan_off.png" />
+    <Content Include="Img\slogan_on.png" />
+    <Content Include="Img\youtube_button.png" />
+    <Content Include="Intro.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="Schedule.aspx" />
+    <Content Include="Scripts\animation.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\Jquery\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\Jquery\jquery-ui-1.9.0.custom.min.js" />
+    <Content Include="Scripts\Jquery\jquery.mCustomScrollbar.js" />
+    <Content Include="Scripts\Jquery\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\quickpager.jquery.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Test.aspx" />
+    <Content Include="TheBest.aspx" />
+    <Content Include="TinyMce\langs\en.js" />
+    <Content Include="TinyMce\license.txt" />
+    <Content Include="TinyMce\plugins\advhr\css\advhr.css" />
+    <Content Include="TinyMce\plugins\advhr\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\advhr\js\rule.js" />
+    <Content Include="TinyMce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\advhr\rule.htm" />
+    <Content Include="TinyMce\plugins\advimage\css\advimage.css" />
+    <Content Include="TinyMce\plugins\advimage\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\advimage\image.htm" />
+    <Content Include="TinyMce\plugins\advimage\img\sample.gif" />
+    <Content Include="TinyMce\plugins\advimage\js\image.js" />
+    <Content Include="TinyMce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\advlink\css\advlink.css" />
+    <Content Include="TinyMce\plugins\advlink\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\advlink\js\advlink.js" />
+    <Content Include="TinyMce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\advlink\link.htm" />
+    <Content Include="TinyMce\plugins\advlist\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\autolink\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\autosave\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\autosave\langs\en.js" />
+    <Content Include="TinyMce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\directionality\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\emotions\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\emotions\emotions.htm" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="TinyMce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="TinyMce\plugins\emotions\js\emotions.js" />
+    <Content Include="TinyMce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\example\dialog.htm" />
+    <Content Include="TinyMce\plugins\example\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\example\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\example\img\example.gif" />
+    <Content Include="TinyMce\plugins\example\js\dialog.js" />
+    <Content Include="TinyMce\plugins\example\langs\en.js" />
+    <Content Include="TinyMce\plugins\example\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="TinyMce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\fullpage\fullpage.htm" />
+    <Content Include="TinyMce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="TinyMce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="TinyMce\plugins\iespell\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="TinyMce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="TinyMce\plugins\inlinepopups\template.htm" />
+    <Content Include="TinyMce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\layer\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\lists\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\media\css\media.css" />
+    <Content Include="TinyMce\plugins\media\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\media\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\media\js\embed.js" />
+    <Content Include="TinyMce\plugins\media\js\media.js" />
+    <Content Include="TinyMce\plugins\media\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\media\media.htm" />
+    <Content Include="TinyMce\plugins\media\moxieplayer.swf" />
+    <Content Include="TinyMce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\paste\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\paste\js\pastetext.js" />
+    <Content Include="TinyMce\plugins\paste\js\pasteword.js" />
+    <Content Include="TinyMce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\paste\pastetext.htm" />
+    <Content Include="TinyMce\plugins\paste\pasteword.htm" />
+    <Content Include="TinyMce\plugins\preview\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\preview\example.html" />
+    <Content Include="TinyMce\plugins\preview\jscripts\embed.js" />
+    <Content Include="TinyMce\plugins\preview\preview.html" />
+    <Content Include="TinyMce\plugins\print\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\print\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\save\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\save\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="TinyMce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="TinyMce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="TinyMce\plugins\spellchecker\css\content.css" />
+    <Content Include="TinyMce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="TinyMce\plugins\style\css\props.css" />
+    <Content Include="TinyMce\plugins\style\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\style\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\style\js\props.js" />
+    <Content Include="TinyMce\plugins\style\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\style\props.htm" />
+    <Content Include="TinyMce\plugins\style\readme.txt" />
+    <Content Include="TinyMce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\table\cell.htm" />
+    <Content Include="TinyMce\plugins\table\css\cell.css" />
+    <Content Include="TinyMce\plugins\table\css\row.css" />
+    <Content Include="TinyMce\plugins\table\css\table.css" />
+    <Content Include="TinyMce\plugins\table\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\table\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\table\js\cell.js" />
+    <Content Include="TinyMce\plugins\table\js\merge_cells.js" />
+    <Content Include="TinyMce\plugins\table\js\row.js" />
+    <Content Include="TinyMce\plugins\table\js\table.js" />
+    <Content Include="TinyMce\plugins\table\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\table\merge_cells.htm" />
+    <Content Include="TinyMce\plugins\table\row.htm" />
+    <Content Include="TinyMce\plugins\table\table.htm" />
+    <Content Include="TinyMce\plugins\template\blank.htm" />
+    <Content Include="TinyMce\plugins\template\css\template.css" />
+    <Content Include="TinyMce\plugins\template\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\template\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\template\js\template.js" />
+    <Content Include="TinyMce\plugins\template\langs\en_dlg.js" />
+    <Content Include="TinyMce\plugins\template\template.htm" />
+    <Content Include="TinyMce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="TinyMce\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="TinyMce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="TinyMce\themes\advanced\about.htm" />
+    <Content Include="TinyMce\themes\advanced\anchor.htm" />
+    <Content Include="TinyMce\themes\advanced\charmap.htm" />
+    <Content Include="TinyMce\themes\advanced\color_picker.htm" />
+    <Content Include="TinyMce\themes\advanced\editor_template.js" />
+    <Content Include="TinyMce\themes\advanced\editor_template_src.js" />
+    <Content Include="TinyMce\themes\advanced\image.htm" />
+    <Content Include="TinyMce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="TinyMce\themes\advanced\img\flash.gif" />
+    <Content Include="TinyMce\themes\advanced\img\icons.gif" />
+    <Content Include="TinyMce\themes\advanced\img\iframe.gif" />
+    <Content Include="TinyMce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="TinyMce\themes\advanced\img\quicktime.gif" />
+    <Content Include="TinyMce\themes\advanced\img\realmedia.gif" />
+    <Content Include="TinyMce\themes\advanced\img\shockwave.gif" />
+    <Content Include="TinyMce\themes\advanced\img\trans.gif" />
+    <Content Include="TinyMce\themes\advanced\img\video.gif" />
+    <Content Include="TinyMce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="TinyMce\themes\advanced\js\about.js" />
+    <Content Include="TinyMce\themes\advanced\js\anchor.js" />
+    <Content Include="TinyMce\themes\advanced\js\charmap.js" />
+    <Content Include="TinyMce\themes\advanced\js\color_picker.js" />
+    <Content Include="TinyMce\themes\advanced\js\image.js" />
+    <Content Include="TinyMce\themes\advanced\js\link.js" />
+    <Content Include="TinyMce\themes\advanced\js\source_editor.js" />
+    <Content Include="TinyMce\themes\advanced\langs\en.js" />
+    <Content Include="TinyMce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="TinyMce\themes\advanced\link.htm" />
+    <Content Include="TinyMce\themes\advanced\shortcuts.htm" />
+    <Content Include="TinyMce\themes\advanced\skins\default\content.css" />
+    <Content Include="TinyMce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="TinyMce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="TinyMce\themes\advanced\skins\default\ui.css" />
+    <Content Include="TinyMce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="TinyMce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="TinyMce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="TinyMce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="TinyMce\themes\advanced\source_editor.htm" />
+    <Content Include="TinyMce\themes\simple\editor_template.js" />
+    <Content Include="TinyMce\themes\simple\editor_template_src.js" />
+    <Content Include="TinyMce\themes\simple\img\icons.gif" />
+    <Content Include="TinyMce\themes\simple\langs\en.js" />
+    <Content Include="TinyMce\themes\simple\skins\default\content.css" />
+    <Content Include="TinyMce\themes\simple\skins\default\ui.css" />
+    <Content Include="TinyMce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="TinyMce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="TinyMce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="TinyMce\tiny_mce.js" />
+    <Content Include="TinyMce\tiny_mce_popup.js" />
+    <Content Include="TinyMce\tiny_mce_src.js" />
+    <Content Include="TinyMce\utils\editable_selects.js" />
+    <Content Include="TinyMce\utils\form_utils.js" />
+    <Content Include="TinyMce\utils\mctabs.js" />
+    <Content Include="TinyMce\utils\validate.js" />
+    <Content Include="video-player\assets\backgroundImages\blackDots.jpg" />
+    <Content Include="video-player\assets\backgroundImages\classic.jpg" />
+    <Content Include="video-player\assets\backgroundImages\darkPattern.jpg" />
+    <Content Include="video-player\assets\backgroundImages\grunge.jpg" />
+    <Content Include="video-player\assets\backgroundImages\rainbow.jpg" />
+    <Content Include="video-player\assets\backgroundImages\whiteDots.jpg" />
+    <Content Include="video-player\assets\backgroundImages\wood.jpg" />
+    <Content Include="video-player\assets\css\styleSheet.css" />
+    <Content Include="video-player\assets\css\styleSheet2.css" />
+    <Content Include="video-player\assets\css\styleSheet3.css" />
+    <Content Include="video-player\assets\errorImages\youtube.jpg" />
+    <Content Include="video-player\assets\imgproxy.php" />
+    <Content Include="video-player\assets\preloaders\balls.swf" />
+    <Content Include="video-player\assets\preloaders\circleLines.swf" />
+    <Content Include="video-player\assets\preloaders\comet.swf" />
+    <Content Include="video-player\assets\preloaders\depthCircle.swf" />
+    <Content Include="video-player\assets\preloaders\flowerGradient.swf" />
+    <Content Include="video-player\assets\preloaders\gradientCircle.swf" />
+    <Content Include="video-player\assets\preloaders\gradientCirclesDepth3.swf" />
+    <Content Include="video-player\assets\preloaders\gradientHalfCircle.swf" />
+    <Content Include="video-player\assets\preloaders\progressiveLine2.swf" />
+    <Content Include="video-player\assets\preloaders\scaleCircles.swf" />
+    <Content Include="video-player\assets\preloaders\thinLine.swf" />
+    <Content Include="video-player\assets\skins\hideButton.xml" />
+    <Content Include="video-player\assets\skins\hideButton2.xml" />
+    <Content Include="video-player\assets\skins\hideButton3.xml" />
+    <Content Include="video-player\assets\skins\videoSkin.xml" />
+    <Content Include="video-player\assets\skins\videoSkin2.xml" />
+    <Content Include="video-player\assets\skins\videoSkin2\fullscreenOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\fullscreenOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\fullscreenOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\fullscreenOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\muteOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\muteOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\muteOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\muteOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\next.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\nextOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\pause.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\pauseOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\play.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\playlistOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\playlistOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\playlistOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\playlistOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\playOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\pointer.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\position.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\prev.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\prevOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\progress.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\repeatOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\repeatOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\repeatOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\repeatOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\scrubBack.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\shuffleOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\shuffleOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\shuffleOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\shuffleOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\stop.png" />
+    <Content Include="video-player\assets\skins\videoSkin2\stopOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3.xml" />
+    <Content Include="video-player\assets\skins\videoSkin3\fullscreenOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\fullscreenOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\fullscreenOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\fullscreenOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\muteOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\muteOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\muteOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\muteOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\next.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\nextOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\pause.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\pauseOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\play.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\playlistOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\playlistOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\playlistOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\playlistOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\playOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\pointer.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\position.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\prev.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\prevOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\progress.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\repeatOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\repeatOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\repeatOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\repeatOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\scrubBack.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\shuffleOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\shuffleOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\shuffleOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\shuffleOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\stop.png" />
+    <Content Include="video-player\assets\skins\videoSkin3\stopOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\fullscreenOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin\fullscreenOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\fullscreenOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin\fullscreenOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\infoBg.png" />
+    <Content Include="video-player\assets\skins\videoSkin\muteOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin\muteOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\muteOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin\muteOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\next.png" />
+    <Content Include="video-player\assets\skins\videoSkin\nextOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\pause.png" />
+    <Content Include="video-player\assets\skins\videoSkin\pauseOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\play.png" />
+    <Content Include="video-player\assets\skins\videoSkin\playlistOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin\playlistOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\playlistOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin\playlistOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\playOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\pointer.png" />
+    <Content Include="video-player\assets\skins\videoSkin\position.png" />
+    <Content Include="video-player\assets\skins\videoSkin\prev.png" />
+    <Content Include="video-player\assets\skins\videoSkin\prevOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\progress.png" />
+    <Content Include="video-player\assets\skins\videoSkin\repeatOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin\repeatOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\repeatOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin\repeatOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\scrubBack.png" />
+    <Content Include="video-player\assets\skins\videoSkin\shuffleOff.png" />
+    <Content Include="video-player\assets\skins\videoSkin\shuffleOffOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\shuffleOn.png" />
+    <Content Include="video-player\assets\skins\videoSkin\shuffleOnOver.png" />
+    <Content Include="video-player\assets\skins\videoSkin\stop.png" />
+    <Content Include="video-player\assets\skins\videoSkin\stopOver.png" />
+    <Content Include="video-player\settings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="video-player\swfobject.js" />
+    <Content Include="video-player\videos.xml" />
+    <Content Include="video-player\video\fantasy.flv" />
+    <Content Include="video-player\video\fantasy.jpg" />
+    <Content Include="video-player\YouTubeVimeoPlayerFX.swf" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditAboutUs.aspx.cs">
+      <DependentUpon>EditAboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditAboutUs.aspx.designer.cs">
+      <DependentUpon>EditAboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditAwards.aspx.cs">
+      <DependentUpon>EditAwards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditAwards.aspx.designer.cs">
+      <DependentUpon>EditAwards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditCatogories.aspx.cs">
+      <DependentUpon>EditCatogories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditCatogories.aspx.designer.cs">
+      <DependentUpon>EditCatogories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditCostumes.aspx.cs">
+      <DependentUpon>EditCostumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditCostumes.aspx.designer.cs">
+      <DependentUpon>EditCostumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditNews.aspx.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditNews.aspx.designer.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditPicture.aspx.cs">
+      <DependentUpon>EditPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditPicture.aspx.designer.cs">
+      <DependentUpon>EditPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditSchedule.aspx.cs">
+      <DependentUpon>EditSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditSchedule.aspx.designer.cs">
+      <DependentUpon>EditSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditTheBest.aspx.cs">
+      <DependentUpon>EditTheBest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditTheBest.aspx.designer.cs">
+      <DependentUpon>EditTheBest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\EditVideo.aspx.cs">
+      <DependentUpon>EditVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\EditVideo.aspx.designer.cs">
+      <DependentUpon>EditVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\Pictures.aspx.cs">
+      <DependentUpon>Pictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\Pictures.aspx.designer.cs">
+      <DependentUpon>Pictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\PreviewCostume.aspx.cs">
+      <DependentUpon>PreviewCostume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\PreviewCostume.aspx.designer.cs">
+      <DependentUpon>PreviewCostume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\PreviewNews.aspx.cs">
+      <DependentUpon>PreviewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\PreviewNews.aspx.designer.cs">
+      <DependentUpon>PreviewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\TheBest.aspx.cs">
+      <DependentUpon>TheBest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\TheBest.aspx.designer.cs">
+      <DependentUpon>TheBest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content\Videos.aspx.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content\Videos.aspx.designer.cs">
+      <DependentUpon>Videos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Awards.aspx.cs">
+      <DependentUpon>Awards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Awards.aspx.designer.cs">
+      <DependentUpon>Awards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class Library\Downloader.cs" />
+    <Compile Include="Class Library\Hash.cs" />
+    <Compile Include="Class Library\ResizerJPG.cs" />
+    <Compile Include="Class Library\StripHTML.cs" />
+    <Compile Include="Class Library\XmlGalleryBuilder.cs" />
+    <Compile Include="Costumes.aspx.cs">
+      <DependentUpon>Costumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costumes.aspx.designer.cs">
+      <DependentUpon>Costumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\TinyMce.ascx.cs">
+      <DependentUpon>TinyMce.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\TinyMce.ascx.designer.cs">
+      <DependentUpon>TinyMce.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\AboutUsCRUD.cs" />
+    <Compile Include="Data Source\About_Us.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\Award.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\AwardCRUD.cs" />
+    <Compile Include="Data Source\Category.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\CategoryCRUD.cs" />
+    <Compile Include="Data Source\Costume.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\CostumeCRUD.cs" />
+    <Compile Include="Data Source\DataAccess.cs" />
+    <Compile Include="Data Source\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\News.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\NewsCRUD.cs" />
+    <Compile Include="Data Source\Option.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\OptionsCRUD.cs" />
+    <Compile Include="Data Source\Participant.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\ParticipantCRUD.cs" />
+    <Compile Include="Data Source\Picture.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\PictureCRUD.cs" />
+    <Compile Include="Data Source\Schedule.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\ScheduleCRUD.cs" />
+    <Compile Include="Data Source\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\UserCRUD.cs" />
+    <Compile Include="Data Source\Video.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data Source\VideoCRUD.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Intro.aspx.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Intro.aspx.designer.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.aspx.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule.aspx.designer.cs">
+      <DependentUpon>Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TheBest.aspx.cs">
+      <DependentUpon>TheBest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheBest.aspx.designer.cs">
+      <DependentUpon>TheBest.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="Data Source\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data Source\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data Source\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data Source\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\Samodiva.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\Awards\Thumbnails\" />
+    <Folder Include="Img\Costumes\Thumbnails\" />
+    <Folder Include="Img\Gallery\Thumbnails\" />
+    <Folder Include="Img\TheBest\Thumbnails\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50297/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

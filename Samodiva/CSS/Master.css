@@ -1,0 +1,391 @@
+﻿/*------------------Common---------------------------*/
+
+
+span {
+    color: Silver;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.PreviewTitle {
+    display: table;
+    margin: 0 auto;
+    color: ButtonFace;
+    font-size: 1.3em;
+}
+
+.PreviewPicture {
+    display: table;
+    margin: 10px auto;
+    min-height: 350px;
+    width: 50%;
+}
+
+.Title {
+    color: ButtonFace;
+    font-size: 1.3em !important;
+}
+
+    .Title:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+.Date {
+    font-size: 0.7em !important;
+}
+
+.Link {
+    color: orange;
+}
+
+    .Link:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+
+.simplePagerNav {
+    display: table;
+    margin: 20px auto;
+    list-style: none;
+    padding: 0px;
+}
+
+    .simplePagerNav li {
+        float: left;
+        margin-right: 10px;
+    }
+
+        .simplePagerNav li a {
+            color: orange;
+        }
+
+            .simplePagerNav li a:hover {
+                color: red;
+            }
+
+
+h2, h3 {
+    color: silver;
+}
+
+.WellcomeText {
+    font-size: 2em;
+}
+
+.MainText {
+    display: table;
+    margin: 0 auto;
+}
+
+.Logo {
+    position: absolute;
+    margin-left: -9%;
+}
+
+/*--------------Site Navigation---------------------*/
+
+
+/*-------------Admin Content-------------------*/
+
+.AdminContent span {
+    color: black;
+}
+
+.AdminContent {
+    display: table;
+    margin: 100px auto;
+    width: 90%;
+}
+
+.AdminNavigation {
+    list-style: none;
+    display: table;
+    margin: 20px auto;
+}
+
+    .AdminNavigation li {
+        margin-left: 10px;
+        float: left;
+    }
+
+        .AdminNavigation li:first-child {
+            margin-left: 0px;
+        }
+
+#LoginStatus {
+    float: right;
+    margin-right: 10px;
+}
+
+#LoginName {
+    float: right;
+    margin-right: 10px;
+}
+
+.LoginPanel {
+    position: absolute;
+    margin-left: 85%;
+}
+
+#phAdminContent_lvAdmin_LoginForm {
+    display: table;
+    margin: 0 auto;
+}
+
+
+/*-------------Site Content-------------------*/
+
+.NewsWrap {
+    text-align: start;
+    padding-left: 2%;
+    width: 98%;
+}
+
+.SingleNews {
+    padding-top: 10px;
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.AwardsList {
+    display: table;
+    margin: 0 auto;
+    text-align: start;
+    width: 98%;
+    padding: 0px;
+    margin-left: 2%;
+}
+
+.SingleAward {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    
+    text-align: center;
+    width: 16.25%;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+.imgSingleAward {
+    height: 110px;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+}
+
+.SingleAward:hover {
+    background-color: rgba(0, 0, 0, 0.80);
+    cursor: pointer;
+}
+
+.NewAwardsList {
+    display: table;
+    margin: 0 auto;
+    text-align: start;
+    width: 98%;
+    float: left;
+    margin-left: 3%;
+}
+
+.NewAwardsThumb {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    text-align: center;
+    height: auto;
+    padding-bottom: 10px;
+    width: 22%; 
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+    .NewAwardsThumb:hover {
+        background-color: rgba(0,0,0,0.80);
+        cursor: pointer;
+    }
+
+.NewSingleAward {
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+.NewTheBestList {
+    display: table;
+    margin: 0 auto;
+    text-align: start;
+    margin-left: 2%;
+    float: left;
+    width: 98%;
+}
+
+.NewTheBestThumb {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    vertical-align: top;
+    text-align: center;
+    height: auto;
+    padding-bottom: 10px;
+    width: 22%;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+    .NewTheBestThumb:hover {
+        background-color: rgba(0,0,0,0.80);
+        cursor: pointer;
+    }
+
+.imgTheBestThumb {
+    background-repeat: no-repeat;
+    height: 110px;
+    background-position: 50% 25%;
+}
+
+.TheBestList {
+    padding: 0;
+    width: 100%;
+}
+
+.TheBestThumb {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 16.25%;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+    .TheBestThumb:hover {
+        background-color: rgba(0,0,0,0.80);
+        cursor: pointer;
+    }
+
+.imgTheBest {
+    height: 110px;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+}
+
+.CostumesList {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.CostumeImage {
+    height: 135px;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+}
+
+.SingleCostumeTitle {
+    text-align: center;
+}
+
+.SingleCostume {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 16.25%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+    .SingleCostume:hover {
+        background-color: rgba(0, 0, 0, 0.80);
+        cursor: pointer;
+    }
+
+.video_player {
+    width: 50%;
+    float: left;
+}
+
+.imgBorder {
+    width: 85%;
+    height: 70%;
+    text-align: left;
+    display: table;
+    margin: 5% auto;
+}
+
+
+
+/*------------------TinyMce---------------------------*/
+
+
+.AboutUsText {
+    height: auto;
+    padding: 5px;
+}
+
+    .AboutUsText iframe {
+        overflow: auto;
+        width: 100%;
+    }
+
+.ScheduleText {
+    height: auto;
+    padding: 5px;
+}
+
+    .ScheduleText iframe {
+        overflow: auto;
+        width: 100%;
+    }
+
+.NewsText {
+    height: auto;
+}
+
+    .NewsText iframe {
+        overflow: auto;
+        width: 100%;
+    }
+
+.mceEditorArea {
+    color: Silver;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: auto;
+    font-size: 0.6em;
+}
+
+.mceContentBody {
+    font-size: 1em;
+    color: Silver;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Table table,
+.Table th,
+.Table td {
+    border: 1px solid black;
+}
+
+
+/*------------------------Footer----------------------------*/
+
+
+.Link_Buttons {
+    position: absolute;
+    bottom: 15px;
+    z-index: 1;
+    right: 15px;
+}
