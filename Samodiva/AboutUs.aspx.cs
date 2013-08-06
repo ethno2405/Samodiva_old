@@ -14,7 +14,7 @@ namespace Samodiva
         {
             using (AboutUsCRUD crud = new AboutUsCRUD())
             {
-                litAboutUs.Text = crud.GetAboutUs().Text;
+                litAboutUs.Text = crud.GetAboutUs().Text; // github test
             }
         }
     }
