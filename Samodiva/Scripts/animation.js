@@ -134,6 +134,11 @@ $(window).on("ready", function () {
                         });
                     }).ready( window.history.pushState("", "Gallery", "/?Gallery"));
                 });
+
+                $('#thumbs').galleriffic({
+                    imageContainerSel: '#slideshow',
+                    controlsContainerSel: '#controls'
+                });
             })
         } else {
             $("#slide_container").animate({ left: slider_width * -4 }, "slow", "easeOutExpo").ready(window.history.pushState("", "Gallery", "/?Gallery"));

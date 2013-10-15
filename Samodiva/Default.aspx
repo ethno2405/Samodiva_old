@@ -9,6 +9,8 @@
     <link href="CSS/Reset.css" rel="stylesheet" type="text/css" />
     <link href="CSS/Master.css" rel="stylesheet" type="text/css" />
     <link href="CSS/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/galleriffic-2.css" rel="stylesheet" type="text/css"/>
+    <link href="CSS/basic.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="Scripts/Jquery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="Scripts/Jquery/jquery-ui-1.9.0.custom.min.js"></script>
     <script type="text/javascript" src="Scripts/Jquery/jquery.mCustomScrollbar.js"></script>
@@ -16,6 +18,7 @@
     <script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="Scripts/animation.js"></script>
     <script type="text/javascript" src="Scripts/quickpager.jquery.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.galleriffic.js"></script>
     <script type="text/javascript">
         $(window).on("ready resize", function () {
             if ($(window).width() < 1280) {
@@ -61,7 +64,7 @@
                 display: none;
             }
         </style>
-        <font face="arial" style="font-size:20px;">JavaScript трябва да е активиран, за да можете да видите тази страница. Изглежда обаче JavaScript е деактивиран или не се поддържа от браузъра ви. За да видите тази страница, активирайте JavaScript , като промените опциите на браузъра и след това 
+        <font face="arial" style="font-size:20px;">JavaScript трябва да е активиран, за да можете да видите тази страница. Изглежда обаче JavaScript е деактивиран или не се поддържа от браузъра Ви. За да видите тази страница, активирайте JavaScript, като промените опциите на браузъра и след това 
             <a href="http://www.samodivabg.com">опитайте отново</a>. </font>
     </noscript>
 </head>
