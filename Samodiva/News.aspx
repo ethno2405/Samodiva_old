@@ -12,7 +12,7 @@
     <script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="Scripts/animation.js"></script>
     <script type="text/javascript">
-        Redirect("News.aspx");
+        //Redirect("News.aspx");
     </script>
 </head>
 <body>

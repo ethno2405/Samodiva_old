@@ -75,7 +75,7 @@ $(window).on("ready", function () {
                                 enable: true
                             }
                         });
-                    }).ready( window.history.pushState("", "Home", "/?Home"));
+                    }).ready(window.history.pushState("", "Home", "/?Home"));
                 });
             })
         } else {
@@ -85,18 +85,18 @@ $(window).on("ready", function () {
 
     $("#menu02").click(function () {
         if ($("#News").val() != 0) {
-        $(".ImgLoading").fadeIn(10);
-        $("#slider2").load("News.aspx", function () {
-            $(".ImgLoading").fadeOut(500).ready(function () {
-                $("#slide_container").animate({ left: slider_width * -2 }, "slow", "easeOutExpo").ready(function () {
-                    $("#slider2").mCustomScrollbar({
-                        scrollButtons: {
-                            enable: true
-                        }
-                    });
-                }).ready( window.history.pushState("", "News", "/?News"));
-            });
-        })
+            $(".ImgLoading").fadeIn(10);
+            $("#slider2").load("News.aspx", function () {
+                $(".ImgLoading").fadeOut(500).ready(function () {
+                    $("#slide_container").animate({ left: slider_width * -2 }, "slow", "easeOutExpo").ready(function () {
+                        $("#slider2").mCustomScrollbar({
+                            scrollButtons: {
+                                enable: true
+                            }
+                        });
+                    }).ready(window.history.pushState("", "News", "/?News"));
+                });
+            })
         } else {
             $("#slide_container").animate({ left: slider_width * -2 }, "slow", "easeOutExpo").ready(window.history.pushState("", "News", "/?News"));
         }
@@ -113,7 +113,7 @@ $(window).on("ready", function () {
                                 enable: true
                             }
                         });
-                    }).ready( window.history.pushState("", "Awards", "/?Awards"));
+                    }).ready(window.history.pushState("", "Awards", "/?Awards"));
                 });
             })
         } else {
@@ -132,16 +132,14 @@ $(window).on("ready", function () {
                                 enable: true
                             }
                         });
-                    }).ready( window.history.pushState("", "Gallery", "/?Gallery"));
+                    }).ready(window.history.pushState("", "Gallery", "/?Gallery"));
                 });
 
-                $('#thumbs').galleriffic({
-                    imageContainerSel: '#slideshow',
-                    controlsContainerSel: '#controls'
-                });
+                activateGallery();
             })
         } else {
             $("#slide_container").animate({ left: slider_width * -4 }, "slow", "easeOutExpo").ready(window.history.pushState("", "Gallery", "/?Gallery"));
+            activateGallery();
         }
     });
 
@@ -297,4 +295,42 @@ function Redirect(page) {
     if (window.location.href.indexOf(page) > 0) {
         window.location.replace("http://localhost:50297" + "/?" + page.replace(".aspx", ""));
     }
+}
+
+function activateGallery() {
+    var gallery = $('#thumbs').galleriffic({
+        delay: 1000,
+        numThumbs: 7,
+        preloadAhead: 10,
+        enableTopPager: true,
+        enableBottomPager: true,
+        maxPagesToShow: 7,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '#controls',
+        captionContainerSel: '#caption',
+        loadingContainerSel: '#loading',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: '&lsaquo; Previous Photo',
+        nextLinkText: 'Next Photo &rsaquo;',
+        nextPageLinkText: 'Next &rsaquo;',
+        prevPageLinkText: '&lsaquo; Prev',
+        enableHistory: false,
+        autoStart: false,
+        syncTransitions: true,
+        defaultTransitionDuration: 500,
+        onSlideChange: function (prevIndex, nextIndex) {
+            this.find('ul.thumbs').children()
+                .eq(prevIndex).fadeTo('fast', 0.67).end()
+                .eq(nextIndex).fadeTo('fast', 1.0);
+        },
+        onPageTransitionOut: function (callback) {
+            this.fadeTo('fast', 0.0, callback);
+        },
+        onPageTransitionIn: function () {
+            this.fadeTo('fast', 1.0);
+        }
+    });
 }
